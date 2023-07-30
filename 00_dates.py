@@ -4,14 +4,57 @@ from datetime import datetime
 
 now = datetime.now()
 
-print(now.day)
-print(now.hour)
-print(now.minute)
-print(now.second)
-print(now.year)
-print(now.month)
+def print_date(date):
+    print(date.year)
+    print(date.month)
+    print(date.day)
+    print(date.hour)
+    print(date.minute)
+    print(date.second)
+    print(date.timestamp())
 
-timestamp = now.timestamp()
+print_date(now)
 
-print(timestamp)
+year_2023 = datetime(2024, 1, 1)
 
+print_date(year_2023)
+
+from datetime import time 
+
+current_time = time(21,37,17)
+
+print(current_time.hour)
+print(current_time.minute)
+print(current_time.second)
+
+from datetime import date 
+
+current_date = date.today()
+
+print(current_date.year)
+print(current_date.month)
+print(current_date.day)
+
+current_date = date(2022,10,6)
+
+print(current_date.year)
+print(current_date.month)
+print(current_date.day)
+
+current_date = date(current_date.year, current_date.month + 1, current_date.day)
+
+print(current_date.month)
+
+diff = year_2023 - now
+print(diff)
+
+diff = year_2023.date() - current_date
+print(diff)
+
+from datetime import timedelta
+
+start_time_delta = timedelta(200,10,100,weeks=10)
+end_time_delta = timedelta(300,100,100,weeks=13)
+
+print(end_time_delta - start_time_delta)
+print(end_time_delta + start_time_delta)
