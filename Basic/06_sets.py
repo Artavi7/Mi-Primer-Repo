@@ -39,4 +39,6 @@ print(my_list[0]) # esto es muy arriesgado
 my_other_set = {"PHP", ".NET", "Python"}
 
 my_new_set= my_set.union(my_other_set)
-print(my_new_set)
+print(my_new_set.union(my_new_set).union(my_list).union({"JavaScript", "C#"}))
+
+print(my_new_set.difference(my_set))
