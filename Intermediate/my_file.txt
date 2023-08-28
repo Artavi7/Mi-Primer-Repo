@@ -1,0 +1,4 @@
+Mi nombre es Ariel 
+ Mi apellido es Tapia 
+ 31 años 
+ Y mi lenguaje preferido es Python Aunque tambien me gusta PHP
