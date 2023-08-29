@@ -69,5 +69,5 @@ print(re.match(pattern, email))
 print(re.search(pattern, email))
 print(re.findall(pattern, email))
 
-email = "atapia@gorecoquimbo.com.mx"
+email = "atapia@gorecoquimbo.com.cl"
 print(re.findall(pattern, email))
