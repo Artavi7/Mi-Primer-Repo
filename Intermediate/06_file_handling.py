@@ -37,5 +37,32 @@ json_test = {"name": "Ariel",
 
 json.dump(json_test, json_file, indent=4)
 
-for line in json_file.readlines():
-    print(line)
+json_file.close()
+
+with open("Intermediate/my_file.json") as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
+
+json_dict = json.load(open("Intermediate/my_file.json"))
+print(json_dict)
+print(type(json_dict))
+print(json_dict["name"])
+
+# csv file
+
+csv_file = open("Intermediate/my_file.csv", "w+")
+
+csv_writer = csv.writer(csv_file)
+csv_writer.writerow(["name", "surname", "age", "language", "website"])
+csv_writer.writerow(["Ariel", "Tapia", 31, "Python", "Artavi.com"])
+csv_writer.writerow(["Brais", "Moure", 35, "Python", "https://moure.dev"])
+
+csv_file.close()
+
+with open("Intermediate/my_file.csv") as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
+        
+# xlsx file
+
+# xml file
